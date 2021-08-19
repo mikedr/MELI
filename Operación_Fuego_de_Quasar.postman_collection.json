@@ -1,0 +1,76 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Operación Fuego de Quasar",
+		"_postman_id": "017fb83f-d519-9512-ec73-dcdbd494cba8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Check status of the service",
+			"request": {
+				"url": "http://127.0.0.1:8080/healthCheck",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Nivel 1",
+			"request": {
+				"url": "http://127.0.0.1:8080/topsecret",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"satellites\": [\r\n\t\t{\r\n\t\t\t\"name\": \"kenobi\",\r\n\t\t\t\"distance\": 4.0,\r\n\t\t\t\"message\": [\"\", \"secreto\", \"\", \"mensaje\", \"\"]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"skywalker\",\r\n\t\t\t\"distance\": 25.5,\r\n\t\t\t\"message\": [\"Mensaje\", \"\", \"\", \"\", \"secreto\",\"River\",\"Capo\"]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"sato\",\r\n\t\t\t\"distance\": 120.7,\r\n\t\t\t\"message\": [\"\", \"\", \"de\", \"la\", \"\"]\r\n\t\t}\r\n\t]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Nivel 2",
+			"request": {
+				"url": "http://127.0.0.1:8080/topsecret_split/skywalker",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"distance\": 5.65,\r\n\t\"message\": [\"\", \"\", \"un\", \"mensaje\", \"\"]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Nivel 2",
+			"request": {
+				"url": "http://127.0.0.1:8080/topsecret_split",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
